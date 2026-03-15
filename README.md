@@ -26,6 +26,12 @@ docker compose up -d
 
 Open **http://localhost:3000** → login `admin` / `admin` → add data source **Prometheus** with URL `http://prometheus:9090` → import dashboard **1860** (Node Exporter Full).
 
+## Stop the stack
+
+```bash
+docker compose down
+```
+
 ## Architecture
 
 ```
