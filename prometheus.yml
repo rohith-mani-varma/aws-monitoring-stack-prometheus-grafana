@@ -1,0 +1,14 @@
+# Prometheus configuration for server monitoring stack
+# Scrapes metrics from Node Exporter
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Node Exporter - system metrics (CPU, memory, disk, network)
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+        labels:
+          instance: 'monitoring-server'
